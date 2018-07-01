@@ -1,0 +1,29 @@
+<div class="container" style="text-align: center">
+    <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" >Blog Application</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+  <div class="row" style="text-align: center">
+    <div class="col-md-12" style="font-size: 0ex22px">All Books {{myname}}</div>
+  </div>
+  <div class="row" style="text-align: center" *ngIf="allbooks.length>0">
+    <div *ngFor="let book of allbooks" class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{book.url}}</div>
+        <div class="panel body" *ngIf="book.name>0">
+          <p>{{book.name}}</p>
+        </div>
+        <div class="panel body" *ngIf="book.gender>0">
+            <p>{{book.gender}}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
